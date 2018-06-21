@@ -2,6 +2,8 @@
 
 ### Prerequisites
 
+A simple CRUD to manage a birthday model: name and date. The model is stored in a MySQL or H2 database and made available through a REST API.
+
 - Maven in 5 Minutes
 https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html
 
