@@ -80,7 +80,7 @@ class SampleDataInitializer implements ApplicationRunner {
 }
 
 @RestController
-@RequestMapping("/bday")
+@RequestMapping("/")
 class BirthdayRestController {
 
     private final BirthdayRepository birthdayRepository;
