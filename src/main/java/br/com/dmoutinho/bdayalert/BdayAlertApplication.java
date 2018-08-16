@@ -1,5 +1,8 @@
 package br.com.dmoutinho.bdayalert;
 
+import java.lang.Thread;
+import java.lang.Exception;
+
 import java.util.Date;
 import java.util.Optional;
 import java.util.Collection;
@@ -37,7 +40,10 @@ import javax.persistence.Id;
 @SpringBootApplication
 @EnableAutoConfiguration
 public class BdayAlertApplication {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
+		System.out.println("Waiting init");
+		Thread.sleep(120000);
+		System.out.println("Waiting end");
 		SpringApplication.run(BdayAlertApplication.class, args);
 	}
 }
