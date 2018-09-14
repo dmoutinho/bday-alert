@@ -42,7 +42,7 @@ import javax.persistence.Id;
 public class BdayAlertApplication {
 	public static void main(String[] args) throws Exception {
 		System.out.println("Waiting init");
-		Thread.sleep(120000);
+		//Thread.sleep(120000);
 		System.out.println("Waiting end");
 		SpringApplication.run(BdayAlertApplication.class, args);
 	}
