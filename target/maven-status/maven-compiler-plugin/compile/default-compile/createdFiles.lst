@@ -1,5 +1,6 @@
-br\com\dmoutinho\bdayalert\BdayAlertApplication.class
-br\com\dmoutinho\bdayalert\BirthdayRestController.class
-br\com\dmoutinho\bdayalert\BirthdayRepository.class
-br\com\dmoutinho\bdayalert\SampleDataInitializer.class
-br\com\dmoutinho\bdayalert\Birthday.class
+br/com/dmoutinho/bdayalert/BirthdayRestController.class
+br/com/dmoutinho/bdayalert/Birthday.class
+br/com/dmoutinho/bdayalert/BirthdayRepository.class
+br/com/dmoutinho/bdayalert/SwaggerConfig.class
+br/com/dmoutinho/bdayalert/SampleDataInitializer.class
+br/com/dmoutinho/bdayalert/BdayAlertApplication.class

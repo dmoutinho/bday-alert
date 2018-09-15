@@ -1,7 +1,0 @@
-applications:
-  - path: bday-alert-0.0.1-SNAPSHOT.jar
-    name: bday-alert
-    environment_json: {}
-    memory: 512M
-    instances: 1
-    disk_quota: 1024M

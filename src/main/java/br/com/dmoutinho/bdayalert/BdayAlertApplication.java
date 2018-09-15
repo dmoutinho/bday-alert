@@ -1,6 +1,5 @@
 package br.com.dmoutinho.bdayalert;
 
-import java.lang.Thread;
 import java.lang.Exception;
 
 import java.util.Date;
@@ -33,12 +32,19 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+@Api(value="/birthday",produces ="application/json")
 @SpringBootApplication
 @EnableAutoConfiguration
+@EnableSwagger2
 public class BdayAlertApplication {
 	public static void main(String[] args) throws Exception {
 		System.out.println("Waiting init");
@@ -113,12 +119,15 @@ class BirthdayRestController {
     
     }
     
+
+	@ApiOperation(value="List birthday",response=Collection.class)
     @CrossOrigin
     @GetMapping("/birthday")
     Collection<Birthday> findAll() {
         return this.birthdayRepository.findAll();
     }
     
+	@ApiOperation(value="Fing birthday by id",response=Birthday.class)
     @CrossOrigin
     @GetMapping("/birthday/{id}")
     ResponseEntity<Birthday> findBirthday(@PathVariable("id") Long id) {
@@ -135,6 +144,7 @@ class BirthdayRestController {
     	
     }
     
+	@ApiOperation(value="Create birthday",response=Birthday.class)
     @CrossOrigin
 	@PostMapping("/birthday")
 	ResponseEntity<Birthday> createBirthday(@RequestBody Birthday birthday) {
@@ -145,6 +155,7 @@ class BirthdayRestController {
 		
 	}
     
+	@ApiOperation(value="Delete birthday by id",response=Birthday.class)
     @CrossOrigin
 	@DeleteMapping("/birthday/{id}")
 	ResponseEntity<Birthday> deleteBirthday(@PathVariable Long id) {
@@ -155,6 +166,7 @@ class BirthdayRestController {
 
 	}
     
+	@ApiOperation(value="Update birthday by id",response=Birthday.class)
     @CrossOrigin
 	@PutMapping("/birthday/{id}")
 	ResponseEntity<Birthday> updateBirthday(@PathVariable Long id, @RequestBody Birthday birthday) {

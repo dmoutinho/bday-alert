@@ -65,6 +65,20 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 		
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>2.6.1</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>2.6.1</version>
+			<scope>compile</scope>
+		</dependency>		
+		
 	</dependencies>
 
 	<build>
@@ -73,17 +87,6 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<!--
-			<plugin>
-			    <groupId>org.apache.maven.plugins</groupId>
-			    <artifactId>maven-compiler-plugin</artifactId>
-			    <version>3.7.0</version>
-			    <configuration>
-				<release>8</release>
-				<verbose>true</verbose>
-			    </configuration>
-			</plugin>
-			-->
 		</plugins>
 	</build>
 	
