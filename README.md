@@ -27,6 +27,13 @@ $ cd target
 $ java -Dserver.port=9080 -jar bday-alert-0.0.1-SNAPSHOT.jar
 ```
 
+
+### Test
+
+```sh
+$ curl localhost:9080/birthday
+```
+
 ### References
 
 - Cloud Native Java - Josh Long
